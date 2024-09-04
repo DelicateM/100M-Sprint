@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>100m Sprint</title>
+    <style>
+      body {
+        background: linear-gradient(
+          106.5deg,
+          rgba(255, 215, 185, 0.91) 23%,
+          rgba(223, 159, 247, 0.8) 93%
+        );
+      }
+      h1 {
+        text-align: center;
+      }
+      h2 {
+        text-align: center;
+      }
+      img {
+        max-width: 100%;
+      }
+      button {
+        display: block;
+        margin: auto;
+        border: 1px solid pink;
+        background: white;
+        border-radius: 10px;
+        padding: 15px 30px;
+        transition: 200ms ease-in-out;
+      }
+      button:hover {
+        cursor: pointer;
+        color: red;
+        background: gray;
+        font-weight: bold;
+      }
+      .wrap {
+        max-width: 600px;
+        margin: 20px auto;
+        background: white;
+        padding: 15px;
+        border-radius: 15px;
+      }
+      footer {
+        text-align: center;
+        font-size: 20px;
+        margin: 10px auto;
+      }
+      .theme-button {
+        font-size: 18px;
+        background: black;
+        color: white;
+        padding: 5px 8px;
+      }
+      .theme-button:hover {
+        cursor: pointer;
+        color: black;
+        background: white;
+        border: 1px solid black;
+      }
+      .intro-picture {
+        border-radius: 10px;
+        transition: 200ms ease-in-out;
+      }
+      .intro-picture:hover {
+        filter: contrast(85%);
+        transform: scale(1.1);
+        filter: brightness(70%);
+      }
+      .grid {
+        display: grid;
+        margin: 15px 0;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+      }
+      .grid img {
+        width: 100%;
+        border-radius: 6px;
+      }
+      .grid img:hover {
+        transform: scale(1.2);
+      }
+      p {
+        line-height: 1.5;
+        font-size: 15px;
+      }
+      .dark {
+        background: black;
+        color: white;
+      }
+      .dark .wrap {
+        background: #2423238c;
+      }
+      .dark a {
+        color: #ffb5b5;
+      }
+    </style>
+  </head>
+  <body class="dark">
+    <button class="theme-button">Change theme</button>
+    <div class="wrap">
+      <h1>100 Metres Sprint 🥇</h1>
+      <h2>My favorite sport 🏃🏿‍♀️</h2>
+      <a href="https://en.wikipedia.org/wiki/100_metres" target="_blank">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/133/753/original/wmnqygzkug-1627739352.jpg?1721143548"
+          alt=""
+          class="intro-picture"
+        />
+      </a>
+      <div class="grid">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/133/750/original/elaine-thompson-herah-09-21.jpg?1721143048"
+          alt=""
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/133/749/original/getty_e1f5f0115f594344a4f724d84d28cb35.jpg?1721142984"
+          alt=""
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/133/766/original/Khamica-1-1024x641.jpg?1721152817"
+          alt=""
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/133/760/original/GettyImages-1325108058.jpg?1721151577"
+          alt=""
+        />
+      </div>
+      <p>
+        The 100 metres, or 100-meter dash, is a sprint race in track and field
+        competitions. The shortest common outdoor running distance, the
+        100-meter (109.36 yd) dash is one of the most popular and prestigious
+        events in the sport of athletics. It has been contested at the Summer
+        Olympics since 1896 for men and since 1928 for women. The inaugural
+        World Championships were in 1983.
+      </p>
+      <a href="https://en.wikipedia.org/wiki/100_metres">
+        Read more on wikipedia</a
+      >
+      <button>Discover Sprint</button>
+    </div>
+    <footer>Coded by <em> Delicate Matsilele</em></footer>
+    <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+
+        if (body.classList.contains("dark")) {
+          body.classList.remove("dark");
+        } else {
+          body.classList.add("dark");
+        }
+      }
+      let themeButton = document.querySelector(".theme-button");
+      themeButton.addEventListener("click", changeTheme);
+    </script>
+  </body>
+</html>
